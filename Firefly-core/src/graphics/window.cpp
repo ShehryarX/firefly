@@ -34,6 +34,13 @@ namespace firefly {
 
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowSizeCallback(m_Window, windowResize);
+
+
+			if (glewInit() != GLEW_OK) {
+				std::cout << "Could not initialize GLEW!" << std::endl;
+				return false;
+			}
+
 			return true;
 		}
 

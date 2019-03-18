@@ -11,6 +11,10 @@ int main() {
 
 	std::cout << glGetString(GL_VERSION) << std::endl;
 
+	// GLuint vao;
+	// glGenVertexArrays(1, &vao);
+	// glBindVertexArray(vao);
+
 	while (!window.closed()) {
 		std::cout << window.getWidth() << "," << window.getHeight() << std::endl;
 		window.clear();
@@ -20,6 +24,7 @@ int main() {
 		glVertex2f(0.5f, 0.5f);
 		glVertex2f(0.5f, -0.5f);
 		glEnd();
+		// glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
 		window.update();
 	}
 	
