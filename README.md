@@ -6,7 +6,10 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 
 ### Setup
 - [x] Setup C++ project  
-- [x] Create dynamic linking with GLFW library 
+- [x] Create custom `bin/` path for intermediate files 
+- [x] Create dynamic linking with GLFW library  
+- [x] Integrate static GLEW library for future support for GLFW  
+- [ ] Add `.gitignore` to remove OS-specific binaries
 
 ### Window
 - [x] Add `window.h` class definitions 
@@ -14,3 +17,5 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 - [x] Add `firefly::graphics::Window` test in `main.cpp`
 - [ ] Create unit testing for `firefly::graphics::Window`
 
+### GLEW
+- [x] Init `glew` inside `header.cpp` to allow future library utils
