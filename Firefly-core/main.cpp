@@ -16,8 +16,17 @@ int main() {
 	// glBindVertexArray(vao);
 
 	while (!window.closed()) {
-		std::cout << window.getWidth() << "," << window.getHeight() << std::endl;
+		// std::cout << window.getWidth() << "," << window.getHeight() << std::endl;
 		window.clear();
+		// if (window.isKeyPressed(GLFW_KEY_A)) {
+		// 	std::cout << "Pressed key A" << std::endl;
+		// }
+		if (window.isMouseButtonPressed(GLFW_MOUSE_BUTTON_LEFT)) {
+			std::cout << "Pressed Mouse Button" << std::endl;
+			double x, y;
+			window.getMousePosition(x, y);
+			std::cout << "Mouse position " << x << ", " << y << std::endl;
+		}
 		glBegin(GL_QUADS);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(-0.5f, 0.5f);

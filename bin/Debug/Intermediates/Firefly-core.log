@@ -1,3 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-  main.cpp
+﻿  main.cpp
+  window.cpp
+  Generating Code...
   Firefly-core.vcxproj -> C:\Users\Shehryar\source\repos\Firefly\bin\Debug\Firefly-core.exe
