@@ -22,3 +22,9 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 
 ### GLEW
 - [x] Init `glew` inside `header.cpp` to allow future library utils
+
+## Math
+- [x] Create `vec2`, `vec3` and `vec4` objects with basic operations
+- [x] Create `math.h` header for math library 
+- [ ] Add unit testing for math library 
+- [ ] Add epsilon floating point comparison for equality or inequality operations
