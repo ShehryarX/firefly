@@ -15,6 +15,9 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 - [x] Add `window.h` class definitions 
 - [x] Add `window.cpp` implementation 
 - [x] Add `firefly::graphics::Window` test in `main.cpp`
+- [x] Add key press and mouse press events
+- [x] Add dynamic mouse and key location fetching
+- [x] Link key, mouse, and cursor position callbacks to GLFW superwindow
 - [ ] Create unit testing for `firefly::graphics::Window`
 
 ### GLEW
