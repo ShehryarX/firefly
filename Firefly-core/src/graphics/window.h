@@ -8,7 +8,7 @@ namespace firefly {
 	namespace graphics {
 
 		#define MAX_KEYS	1024
-		#define MAX_BUTTONS 	32
+		#define MAX_BUTTONS 32
 
 		class Window {
 		private:
