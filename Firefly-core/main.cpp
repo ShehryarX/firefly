@@ -1,7 +1,7 @@
 #pragma comment(lib, "legacy_stdio_definitions.lib")
 
 #include "src/graphics/window.h"
-#include "src/math/vec2.h"
+#include "src/math/math.h"
 
 int main() {
 	using namespace firefly;
@@ -24,6 +24,7 @@ int main() {
 	// std::cout << vector << std::endl;
 	// vector = vector.add(vec2(1000.0f, 1.0f));
 	// std::cout << c << std::endl;
+	// mat4 position = mat4::translation(vec3(2, 3, 4));
 	// system("PAUSE");
 
 	while (!window.closed()) {
