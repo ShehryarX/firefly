@@ -63,7 +63,6 @@ namespace firefly {
 			y = my;
 		}
 
-
 		void Window::clear() const {
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
@@ -83,6 +82,12 @@ namespace firefly {
 		}
 
 		void Window::update() {
+			GLenum error = glGetError();
+
+			if (GL_NO_ERROR != error) {
+				std::cout << "OpenGL error: " << error << std::endl;
+			}
+
 			glfwPollEvents();
 			glfwSwapBuffers(m_Window);
 		}
