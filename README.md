@@ -46,3 +46,5 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 ## Renderers
 - [x] Create `Renderable.h` superclass for future renderable type prototype
 - [x] Create simple 2D renderer class
+- [x] Develop faster, batch renderer in `BatchRenderer2D`
+- [x] Benchmark batch renderer with 57000 untextured sprites
