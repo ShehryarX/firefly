@@ -39,7 +39,6 @@ namespace firefly {
 
 			memcpy(elements, data, 4 * 4 * sizeof(float));
 
-
 			return *this;
 		}
 
