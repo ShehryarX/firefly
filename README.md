@@ -51,3 +51,7 @@ Firefly is a cross-platform game engine built with C++ using GLFW.
 
 ## Benchmarking
 - [x] Create timer class to determine FPS
+
+## Layers
+- [x] Create base class `layer.h`
+- [x] Create tile layer `tilelayer.h` and test in `main.cpp`
