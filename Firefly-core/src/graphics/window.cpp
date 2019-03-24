@@ -50,6 +50,8 @@ namespace firefly {
 			glfwSetMouseButtonCallback(m_Window, mouse_button_callback);
 			glfwSetCursorPosCallback(m_Window, cursor_position_callback);
 
+			glfwSwapInterval(0.0); // vsync off
+
 			if (glewInit() != GLEW_OK) {
 				std::cout << "Could not initialize GLEW!" << std::endl;
 				return false;

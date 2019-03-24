@@ -25,7 +25,8 @@ namespace firefly {
 			glEnableVertexAttribArray(SHADER_COLOR_INDEX);
 			
 			glVertexAttribPointer(SHADER_VERTEX_INDEX, 3, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid *)0);
-			glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid *)(3 * sizeof(GLfloat)));
+			// GL_FLOAT => GL_UNSIGNED_BYTE for unsigned color
+			glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_TRUE, RENDERER_VERTEX_SIZE, (const GLvoid *)(offsetof(VertexData, VertexData::color)));
 			
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
 		
@@ -59,6 +60,13 @@ namespace firefly {
 			const math::vec3 &position = renderable->getPosition();
 			const math::vec2 &size= renderable->getSize();
 			const math::vec4 &color= renderable->getColor();
+
+			// int r = color.x * 255.0f;
+			// int g = color.y * 255.0f;
+			// int b = color.z * 255.0f;
+			// int a = color.w * 255.0f;
+
+			// unsigned int c = a << 24 || b << 16 | g << 8 | r;
 
 			m_Buffer->vertex = position;
 			m_Buffer->color = color;

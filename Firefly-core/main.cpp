@@ -8,6 +8,7 @@
 #include "src/graphics/simple2drenderer.h"
 #include "src/graphics/sprite.h"
 #include "src/graphics/batchrenderer2d.h"
+#include "src/utils/timer.h"
 
 #include <time.h>
 
@@ -29,6 +30,7 @@ int main() {
 
 	std::vector<Renderable2D*> sprites;
 	srand(time(nullptr));
+
 
 	for (float y = 0; y < 9.0f; y += 0.1) {
 		for (float x = 0; x < 16.0f; x += 0.1) {
@@ -59,6 +61,10 @@ int main() {
 
 	shader.setUniform2f("light_pos", vec2(4.0f, 1.5f));
 	shader.setUniform4f("colour", vec4(0.2f, 0.3f, 0.8f, 1.0f));
+	
+	Timer time;
+	float timer = 0.0f;
+	unsigned int frames = 0;
 
 	while (!window.closed()) {
 		window.clear();
@@ -76,6 +82,14 @@ int main() {
 #endif
 		renderer.flush();
 		window.update();
+
+		frames++;
+
+		if (time.elapsed() - timer > 1.0f) {
+			timer += 1.0f;
+			printf("%d fps\n", frames);
+			frames = 0;
+		}
 	}
 
 
