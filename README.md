@@ -1,4 +1,7 @@
 # Firefly Game Engine
+**Currently in development**   
+**Experimental beta**
+
 Firefly is a cross-platform game engine built with C++ using GLFW.
 
 
